@@ -26,7 +26,15 @@ Finally, checkout the dotfiles.
 $ dotfiles checkout
 ```
 
-## NeoVim
+## Dependencies
+
+### [zsh](http://zsh.sourceforge.net)
+
+`zsh` is used for this configuration.
+
+### [Neovim](https://neovim.io)
+
+Neovim is the editor of choice.
 
 To install all plugins, install [vim-plug](https://github.com/junegunn/vim-plug).
 
@@ -35,8 +43,21 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
-Then, open a NeoVim buffer, and run `:PlugInstall`. This will install all NeoVim plugins, as well as all coc.nvim extensions.
+Then, open a Neovim buffer, and run `:PlugInstall`. This will install all Neovim plugins, as well as all [coc.nvim](https://github.com/neoclide/coc.nvim) extensions.
 
-[coc.nvim](https://github.com/neoclide/coc.nvim) requires an installation of [Node.js](https://nodejs.org/en/).
+### [Node.js](https://nodejs.org/en/)
 
-In addition, NeoVim will require the [Python neovim](https://pypi.org/project/neovim/) package.
+Required by coc.nvim, the Intellisense engine used for Neovim.
+
+### [Python](https://www.python.org)
+
+In addition, NeoVim will require an installation of Python and the [neovim](https://pypi.org/project/neovim/) package.
+
+### [ranger](https://github.com/ranger/ranger)
+
+Used with the `r` and `rcd` custom commands.
+
+### [rsync](https://rsync.samba.org)
+
+Required to use the `auto-remote-sync` custom command to sync directories
+

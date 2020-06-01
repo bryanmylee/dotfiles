@@ -1,12 +1,4 @@
-if (has("nvim"))
-    set runtimepath^=~/.vim runtimepath+=~/.vim/after
-    let &packpath = &runtimepath
-endif
-
-" |----------|
-" | Vim Plug |
-" |----------|
-call plug#begin('~/.vim/vim-plug') "{{{
+call plug#begin('~/.config/nvim/vim-plug') "{{{
 
 " |---|-----------|
 " | - | Interface |
@@ -521,4 +513,3 @@ endfunction
 
 nmap <silent> <Leader>c :call ToggleDarkMode()<CR>
 "}}}
-

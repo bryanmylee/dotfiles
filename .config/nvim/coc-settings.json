@@ -1,0 +1,31 @@
+{
+  "languageserver": {
+    "ccls": {
+      "command": "/usr/local/opt/ccls/bin/ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        },
+        "clang": {
+          // make sure you have installed commandLineTools
+          "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1",
+          "extraArgs": [
+            "-isystem",
+            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
+            "-isysroot",
+            "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
+          ]
+        }
+      }
+    }
+  },
+  "suggest.noselect": false,
+  "snippets.loadFromExtensions": false,
+  "snippets.ultisnips.directories": [
+    "~/.vim/ultisnips"
+  ],
+  "java.format.settings.url": "/Users/bryan/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml",
+  "java.errors.incompleteClasspath.severity": "ignore"
+}

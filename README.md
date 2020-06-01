@@ -40,6 +40,10 @@ $ git config --global core.excludesfile ~/.gitignore
 
 [zsh](http://zsh.sourceforge.net) is used for this configuration.
 
+### tmux
+
+[tmux](https://github.com/tmux/tmux/wiki) is used for session persistance and window management.
+
 ### Neovim
 
 [Neovim](https://neovim.io) is the editor of choice.

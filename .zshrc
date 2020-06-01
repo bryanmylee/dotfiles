@@ -118,5 +118,8 @@ alias gco="git checkout"
 alias gsh="git stash"
 alias gsp="git stash pop"
 
-source "$HOME/.local-scripts.sh"
+LOCAL_SCRIPT="~/.config/local-config.sh"
+if [[ -f "$LOCAL_SCRIPT" ]]; then
+    source "$LOCAL_SCRIPT"
+fi
 

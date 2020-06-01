@@ -28,13 +28,13 @@ $ dotfiles checkout
 
 ## Dependencies
 
-### [zsh](http://zsh.sourceforge.net)
+### zsh
 
-`zsh` is used for this configuration.
+[zsh](http://zsh.sourceforge.net) is used for this configuration.
 
-### [Neovim](https://neovim.io)
+### Neovim
 
-Neovim is the editor of choice.
+[Neovim](https://neovim.io) is the editor of choice.
 
 To install all plugins, install [vim-plug](https://github.com/junegunn/vim-plug).
 
@@ -45,19 +45,23 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 Then, open a Neovim buffer, and run `:PlugInstall`. This will install all Neovim plugins, as well as all [coc.nvim](https://github.com/neoclide/coc.nvim) extensions.
 
-### [Node.js](https://nodejs.org/en/)
+### Node.js
 
-Required by coc.nvim, the Intellisense engine used for Neovim.
+[Node.js](https://nodejs.org/en/) is required by coc.nvim, the Intellisense engine used for Neovim.
 
-### [Python](https://www.python.org)
+### Python
 
-In addition, NeoVim will require an installation of Python and the [neovim](https://pypi.org/project/neovim/) package.
+In addition, Neovim will require an installation of Python and the [neovim](https://pypi.org/project/neovim/) package.
 
-### [ranger](https://github.com/ranger/ranger)
+### fzf
 
-Used with the `r` and `rcd` custom commands.
+[fzf](https://github.com/junegunn/fzf) is used system-wide and within Neovim to provide fuzzy file-finding.
 
-### [rsync](https://rsync.samba.org)
+### ranger
 
-Required to use the `auto-remote-sync` custom command to sync directories
+[ranger](https://github.com/ranger/ranger) is used with the `r` and `rcd` custom commands.
+
+### rsync
+
+[rsync](https://rsync.samba.org) is required to use the `auto-remote-sync` custom command to sync directories
 

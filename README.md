@@ -26,6 +26,14 @@ Finally, checkout the dotfiles.
 $ dotfiles checkout
 ```
 
+### Global gitignore
+
+To set up environment-specific files to ignore system-wide, configure the global excludes file.
+
+```bash
+$ git config --global core.excludesfile ~/.gitignore
+```
+
 ## Dependencies
 
 ### zsh

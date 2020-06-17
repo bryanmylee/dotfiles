@@ -72,6 +72,7 @@ let g:fzf_colors =
 " |---|---------------------|
 Plug 'arzg/vim-colors-xcode'
 Plug 'joshdick/onedark.vim'
+Plug 'haishanh/night-owl.vim'
 "{{{
 let g:onedark_hide_endofbuffer = 1
 "}}}
@@ -498,7 +499,7 @@ if (has("termguicolors"))
 endif
 
 set background=dark
-colorscheme onedark
+colorscheme night-owl
 let g:airline_theme='atomic'
 
 function! ToggleDarkMode()
@@ -507,7 +508,7 @@ function! ToggleDarkMode()
     colorscheme xcodelight
   else
     set background=dark
-    colorscheme onedark
+    colorscheme night-owl
   endif
 endfunction
 

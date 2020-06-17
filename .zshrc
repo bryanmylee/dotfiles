@@ -119,8 +119,9 @@ alias gph="git push"
 alias gco="git checkout"
 alias gsh="git stash"
 alias gsp="git stash pop"
+alias gri="git rebase -i"
 
-LOCAL_SCRIPT="~/.config/local-config.sh"
+LOCAL_SCRIPT="$HOME/.config/local-config.sh"
 if [[ -f "$LOCAL_SCRIPT" ]]; then
     source "$LOCAL_SCRIPT"
 fi

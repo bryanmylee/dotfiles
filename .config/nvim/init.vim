@@ -374,6 +374,7 @@ let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-svelte',
     \ 'coc-tsserver',
+    \ 'coc-restclient',
     \]
 
 " Use Tab for trigger completion with characters ahead and navigate.
@@ -438,6 +439,8 @@ xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
+
+noremap <Leader>0 :CocCommand rest-client.request<CR>
 "}}}
 
 " UltiSnips

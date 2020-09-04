@@ -389,9 +389,9 @@ inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<C-h>"
 " Use <C-space> to trigger completion.
 inoremap <silent><expr> <C-space> coc#refresh()
 
-" Use K to show documentation in preview window.
+" Use gh to show documentation in preview window.
 " {{{ show_documentation()
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> gh :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')

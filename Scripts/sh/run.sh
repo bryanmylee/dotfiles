@@ -17,5 +17,5 @@ elif [[ $ext = "applescript" ]] || [[ $ext = "scpt" ]]; then
 elif [[ $ext = "js" ]]; then
   node "$filename"
 elif [[ $ext = "java" ]]; then
-  javac "$filename" && java "$name";
+  javac -d temp "$filename" && java -cp .:temp "$name" && rm -rf temp;
 fi

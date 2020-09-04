@@ -17,5 +17,5 @@ function ranger-cd {
     rm -f -- "$tempfile"
 }
 
-alias r="ranger"
+# alias r="ranger"
 alias rcd="ranger-cd"

@@ -25,5 +25,6 @@
   "snippets.ultisnips.directories": [
     "~/.vim/ultisnips"
   ],
-  "java.errors.incompleteClasspath.severity": "ignore"
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"${HOME}/.config/coc/extensions/node_modules/coc-java-lombok/jar/lombok.jar\""
 }

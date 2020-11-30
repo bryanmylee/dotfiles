@@ -33,7 +33,7 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfiles config --local status.showUntrackedFiles no
 
 
-# Vi 
+# Vi
 # ==
 bindkey -v
 export KEYTIMEOUT=1
@@ -55,9 +55,9 @@ function zle-keymap-select {
     if [[ ${KEYMAP} == vicmd ]] ||
        [[ $1 = 'block' ]]; then
         echo -ne '\e[1 q'
-    elif [[ ${KEYMAP} == main ]] || 
-         [[ ${KEYMAP} == viins ]] || 
-         [[ ${KEYMAP} == '' ]] || 
+    elif [[ ${KEYMAP} == main ]] ||
+         [[ ${KEYMAP} == viins ]] ||
+         [[ ${KEYMAP} == '' ]] ||
          [[ $1 == 'beam' ]]; then
         echo -ne '\e[5 q'
     fi

@@ -3,14 +3,14 @@ call plug#begin('~/.config/nvim/vim-plug')
 " ui
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes' " A pretty status bar
-Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'liuchengxu/vista.vim'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify' " A start screen for vim on an empty buffer
 Plug 'Yggdroot/indentLine'
-Plug 'psliwka/vim-smoothie'
+Plug 'ryanoasis/vim-devicons'
 " nav
+Plug 'psliwka/vim-smoothie'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'

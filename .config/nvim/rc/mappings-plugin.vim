@@ -8,8 +8,8 @@ let g:NERDTreeMapCloseChildren = 'c'
 let g:NERDTreeMapJumpRoot = 'gg'
 let g:NERDTreeMapToggleHidden = 'zh'
 
-" tagbar
-nmap <silent> <Leader>B :TagbarToggle<CR>
+" vista.vim
+nmap <silent> <Leader>v :Vista!!<CR>
 
 " undotree
 nmap <silent> <Leader>u :UndotreeToggle<CR>

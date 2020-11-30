@@ -58,3 +58,4 @@ set concealcursor="nc"
 autocmd BufWritePre * %s/\v\s+$//e
 " open new horizontal panes below the current pane
 set splitbelow
+

@@ -8,5 +8,4 @@ source ~/.config/nvim/rc/mappings.vim
 source ~/.config/nvim/rc/mappings-terminal.vim
 source ~/.config/nvim/rc/mappings-plugin.vim
 source ~/.config/nvim/rc/theme.vim
-source ~/.config/nvim/rc/devicons.vim
 

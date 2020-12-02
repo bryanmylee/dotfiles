@@ -1,14 +1,15 @@
 call plug#begin('~/.config/nvim/vim-plug')
 
 " ui
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes' " A pretty status bar
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes' " A pretty status bar
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'liuchengxu/vista.vim'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify' " A start screen for vim on an empty buffer
 Plug 'Yggdroot/indentLine'
 Plug 'ryanoasis/vim-devicons'
+Plug 'bryanmylee/vim-colorscheme-icons'
 " nav
 Plug 'psliwka/vim-smoothie'
 Plug 'christoomey/vim-tmux-navigator'
@@ -25,6 +26,7 @@ Plug 'arzg/vim-colors-xcode'
 Plug 'joshdick/onedark.vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'ntk148v/vim-horizon'
+Plug 'ericbn/vim-solarized'
 " git
 Plug 'tpope/vim-fugitive' " A git wrapper
 Plug 'airblade/vim-gitgutter'

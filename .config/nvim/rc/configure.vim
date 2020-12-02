@@ -27,8 +27,8 @@ set nowritebackup
 set updatetime=300
 set shortmess+=c
 
-" vim can merge sign and number column now.
-set signcolumn=number
+" always show sign column to prevent window shifting
+set signcolumn=yes
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width

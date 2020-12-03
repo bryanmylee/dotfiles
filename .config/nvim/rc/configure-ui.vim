@@ -57,6 +57,7 @@ let g:fzf_colors = {
 
 " colors
 let g:onedark_hide_endofbuffer = 1
+let g:colorscheme_icons_targets = ['nerdtree', 'startify']
 
 " vim-table-mode
 let g:table_mode_corner='|'

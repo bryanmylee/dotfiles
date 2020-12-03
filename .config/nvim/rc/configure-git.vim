@@ -1,3 +1,4 @@
+" <Leader>g git stuff
 nmap <Leader>g<Space> :Git \
 nmap <Leader>ga :Git add %<CR>
 nmap <Leader>gc :Gcommit %<CR>

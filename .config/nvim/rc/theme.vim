@@ -22,5 +22,5 @@ function! ToggleDarkMode()
   endif
 endfunction
 
-nmap <silent> <Leader>c :call ToggleDarkMode()<CR>
+nmap <silent> <Bslash>c :call ToggleDarkMode()<CR>
 

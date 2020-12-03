@@ -31,15 +31,6 @@ endfunction
 let g:coc_snippet_next = '<Tab>'
 let g:coc_snippet_prev = '<S-Tab>'
 
-" <C-space> to trigger completion in insert mode.
-inoremap <silent><expr> <C-space> coc#refresh()
-
-" <C-space> to trigger actions.
-nmap <silent> <C-Space> :CocAction<CR>
-
-" gh to show documentation in preview window.
-nnoremap <silent> gh :call <SID>show_documentation()<CR>
-
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -50,9 +41,18 @@ function! s:show_documentation()
   endif
 endfunction
 
+" <C-space> to trigger completion in insert mode.
+inoremap <silent><expr> <C-space> coc#refresh()
+
 " [g and ]g to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" g<Space> to trigger actions.
+nmap <silent> g<Space> :CocAction<CR>
+
+" gh to show documentation in preview window.
+nnoremap <silent> gh :call <SID>show_documentation()<CR>
 
 " Find implementation
 nmap <silent> gi <Plug>(coc-implementation)
@@ -74,7 +74,4 @@ xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
-
-" Use rest client
-noremap <Leader>0 :CocCommand rest-client.request<CR>
 

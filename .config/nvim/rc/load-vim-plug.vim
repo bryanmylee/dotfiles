@@ -41,7 +41,6 @@ Plug 'easymotion/vim-easymotion'       " <Leader><Leader>f, F, t, T
 Plug 'michaeljsmith/vim-indent-object' " <text object>: ai ii aI
 Plug 'wellle/targets.vim'              " A whole bunch of text objects
 Plug 'dhruvasagar/vim-table-mode'      " <Leader>tm
-Plug 'ericcong/vimxy'                  " Convert between XML and YAML
 Plug 'mattn/emmet-vim'                 " Provide emmet-style HTML completion and generation
 Plug 'vim-scripts/DoxygenToolkit.vim'  " Generate doxygen comments for C and other languages
 " autocomplete

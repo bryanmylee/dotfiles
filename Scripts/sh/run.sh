@@ -6,7 +6,7 @@ ext="${filename##*.}"
 name="${filename%.*}"
 
 if [[ $ext = "c" ]]; then
-  clang "$filename" -g -O1 -fsanitize=address -o "$name";
+  gcc "$filename" -g -O1 -fsanitize=address -o "$name";
   ./"$name";
   rm "$name";
   rm -r "${name}.dSYM"

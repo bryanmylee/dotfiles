@@ -17,8 +17,8 @@ plugins=(
 )
 
 source "$ZSH/oh-my-zsh.sh"
-source "$HOME/scripts/sh/ranger-cd.sh"
-source "$HOME/scripts/sh/auto-remote-sync.sh"
+source "$HOME/.scripts/sh/ranger-cd.sh"
+source "$HOME/.scripts/sh/auto-remote-sync.sh"
 
 
 
@@ -105,7 +105,7 @@ alias v='vim'
 alias vimf='nvim "`fzf`"'
 alias vf='vimf'
 # Code-Runner imitation
-alias run="~/Scripts/sh/run.sh"
+alias run="~/.scripts/sh/run.sh"
 # git
 alias ga="git add"
 alias gb="git branch"

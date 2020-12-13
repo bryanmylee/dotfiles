@@ -21,6 +21,7 @@ Plug 'sheerun/vim-polyglot' " Enables more language syntax support
 Plug 'neoclide/jsonc.vim', { 'for': ['json', 'jsonc'] }
 Plug 'lervag/vimtex'
 Plug 'plasticboy/vim-markdown'
+Plug 'evanleck/vim-svelte'
 " colors
 Plug 'arzg/vim-colors-xcode'
 Plug 'joshdick/onedark.vim'

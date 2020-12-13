@@ -62,3 +62,6 @@ let g:colorscheme_icons_targets = ['nerdtree', 'startify']
 " vim-table-mode
 let g:table_mode_corner='|'
 
+" vim-svelte
+let g:svelte_preprocessors = ['typescript']
+

@@ -17,8 +17,8 @@ plugins=(
 )
 
 source "$ZSH/oh-my-zsh.sh"
-source "$HOME/Scripts/sh/ranger-cd.sh"
-source "$HOME/Scripts/sh/auto-remote-sync.sh"
+source "$HOME/scripts/sh/ranger-cd.sh"
+source "$HOME/scripts/sh/auto-remote-sync.sh"
 
 
 

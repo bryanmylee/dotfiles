@@ -57,9 +57,9 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 Then, open a Neovim buffer, and run `:PlugInstall`. This will install all Neovim plugins, as well as all [coc.nvim](https://github.com/neoclide/coc.nvim) extensions.
 
-### Node.js
+### Node.js and npm
 
-[Node.js](https://nodejs.org/en/) is required by coc.nvim, the Intellisense engine used for Neovim.
+[Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com) is required by coc.nvim, the Intellisense engine used for Neovim.
 
 ### Python
 

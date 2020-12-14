@@ -1,7 +1,12 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.zsh"
 
-ZSH_THEME="my-gallois"
+host=`hostname`
+if [[ $host == "bryan-server" ]]; then
+  ZSH_THEME="gallois-server"
+else
+  ZSH_THEME="gallois-home"
+fi
 
 # Use hyphen-insensitive completion.
 HYPHEN_INSENSITIVE="true"

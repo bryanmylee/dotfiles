@@ -1,8 +1,8 @@
 call plug#begin('~/.config/nvim/vim-plug')
 
 " ui
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes' " A pretty status bar
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes' " A pretty status bar
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'liuchengxu/vista.vim'
 Plug 'mbbill/undotree'
@@ -10,6 +10,7 @@ Plug 'mhinz/vim-startify' " A start screen for vim on an empty buffer
 Plug 'Yggdroot/indentLine'
 Plug 'ryanoasis/vim-devicons'
 Plug 'bryanmylee/vim-colorscheme-icons'
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' } " treesitter-based highlighting
 " nav
 Plug 'psliwka/vim-smoothie'
 Plug 'christoomey/vim-tmux-navigator'
@@ -22,6 +23,7 @@ Plug 'neoclide/jsonc.vim', { 'for': ['json', 'jsonc'] }
 Plug 'lervag/vimtex'
 Plug 'plasticboy/vim-markdown'
 Plug 'evanleck/vim-svelte'
+Plug 'cakebaker/scss-syntax.vim'
 " colors
 Plug 'arzg/vim-colors-xcode'
 Plug 'joshdick/onedark.vim'

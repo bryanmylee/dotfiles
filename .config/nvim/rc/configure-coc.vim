@@ -12,6 +12,7 @@ let g:coc_global_extensions = [
             \ 'coc-snippets',
             \ 'coc-svelte',
             \ 'coc-tsserver',
+            \ 'coc-tailwindcss',
             \]
 
 " Tab for trigger completion with characters ahead and navigate.

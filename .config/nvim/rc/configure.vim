@@ -16,7 +16,7 @@ set nocursorline
 set nocursorcolumn
 set scrolljump=5
 set lazyredraw
-set synmaxcol=180
+set synmaxcol=3000
 
 " required for coc
 set hidden

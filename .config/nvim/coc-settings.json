@@ -28,6 +28,7 @@
   "java.errors.incompleteClasspath.severity": "ignore",
   "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"${HOME}/.config/coc/extensions/node_modules/coc-java-lombok/jar/lombok.jar\"",
   "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.headwind.runOnSave": false,
   "tsserver.npm": "${HOME}/.nvm/versions/node/v14.15.2/bin/npm",
   "tsserver.tsdk": "${HOME}/.nvm/versions/node/v14.15.2/lib/node_modules/typescript/lib"
 }

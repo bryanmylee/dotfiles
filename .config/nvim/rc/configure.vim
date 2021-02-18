@@ -58,3 +58,4 @@ autocmd BufWritePre * %s/\v\s+$//e
 " open new horizontal panes below the current pane
 set splitbelow
 
+let g:python3_host_prog = "/usr/local/bin/python3"

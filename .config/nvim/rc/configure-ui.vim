@@ -9,14 +9,29 @@ set noshowmode
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 let g:NERDTreeNaturalSort = 1
-let g:NERDTreeHijackNetrw = 1
+let g:NERDTreeHijackNetrw = 0
 
 " vista.vim
 let g:vista_fold_toggle_icons = ['-', '+']
 let g:vista_default_executive = 'coc'
 
 " vim-startify
-let g:startify_change_to_vcs_root = 1
+let g:startify_change_to_dir = 1
+
+function! StartUp()
+    if !argc() && !exists("s:std_in")
+        Startify
+    end
+    if argc() && isdirectory(argv()[0]) && !exists("s:std_in")
+        enew
+        exec "cd " argv()[0]
+        exec "Startify"
+    end
+endfunction
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * call StartUp()
+
 "{{{ show all modified files of the current git repo
 function! s:gitModified()
     let files = systemlist('git ls-files -m 2>/dev/null')

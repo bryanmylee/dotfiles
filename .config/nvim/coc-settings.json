@@ -31,5 +31,9 @@
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.headwind.runOnSave": false,
   "tsserver.npm": "${HOME}/.nvm/versions/node/v14.15.2/bin/npm",
-  "tsserver.tsdk": "${HOME}/.nvm/versions/node/v14.15.2/lib/node_modules/typescript/lib"
+  "tsserver.tsdk": "${HOME}/.nvm/versions/node/v14.15.2/lib/node_modules/typescript/lib",
+  "python.autoComplete.extraPaths": [
+    "${env:SPARK_HOME}/python",
+    "${env:SPARK_HOME}/python/pyspark"
+  ]
 }

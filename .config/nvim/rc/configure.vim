@@ -57,5 +57,8 @@ set concealcursor="nc"
 autocmd BufWritePre * %s/\v\s+$//e
 " open new horizontal panes below the current pane
 set splitbelow
+" manual motion-based folding
+set foldmethod=manual
 
 let g:python3_host_prog = "/usr/local/bin/python3"
+

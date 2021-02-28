@@ -1,8 +1,8 @@
 call plug#begin('~/.config/nvim/vim-plug')
 
 " ui
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes' " A pretty status bar
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes' " A pretty status bar
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'liuchengxu/vista.vim'
 Plug 'mbbill/undotree'

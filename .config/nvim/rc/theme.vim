@@ -1,5 +1,5 @@
 let g:dark_theme = "horizon"
-let g:light_theme = "solarized"
+let g:light_theme = "xcodelight"
 
 if (has("nvim"))
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1

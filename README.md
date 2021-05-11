@@ -3,13 +3,13 @@
 Set up `dotfiles` alias.
 
 ```bash
-$ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 
 Prevent recursive problems by ignoring `~/.dotfiles/`.
 
 ```bash
-$ echo '.dotfiles' >> .gitignore
+echo '.dotfiles' >> .gitignore
 ```
 
 Clone this repository into a bare repo at `~/.dotfiles/`.
@@ -17,13 +17,13 @@ Clone this repository into a bare repo at `~/.dotfiles/`.
 Make sure to set up the SSH keys prior to using SSH, or use HTTPS otherwise.
 
 ```bash
-$ git clone --bare https://github.com/bryanmylee/dotfiles.git $HOME/.dotfiles
+git clone --bare https://github.com/bryanmylee/dotfiles.git $HOME/.dotfiles
 ```
 
 Finally, checkout the dotfiles.
 
 ```bash
-$ dotfiles checkout
+dotfiles checkout
 ```
 
 ### Global gitignore
@@ -31,7 +31,7 @@ $ dotfiles checkout
 To set up environment-specific files to ignore system-wide, configure the global excludes file.
 
 ```bash
-$ git config --global core.excludesfile ~/.gitignore
+git config --global core.excludesfile ~/.gitignore
 ```
 
 ## Dependencies
@@ -69,11 +69,7 @@ In addition, Neovim will require an installation of Python and the [neovim](http
 
 [fzf](https://github.com/junegunn/fzf) is used system-wide and within Neovim to provide fuzzy file-finding.
 
-### ranger
+### nnn
 
-[ranger](https://github.com/ranger/ranger) is used with the `r` and `rcd` custom commands.
-
-### rsync
-
-[rsync](https://rsync.samba.org) is required to use the `auto-remote-sync` custom command to sync directories
+[nnn](https://github.com/jarun/nnn) for navigation commmands.
 

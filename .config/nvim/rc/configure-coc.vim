@@ -1,4 +1,5 @@
 let g:coc_global_extensions = [
+            \ 'coc-clangd',
             \ 'coc-css',
             \ 'coc-emmet',
             \ 'coc-eslint',
@@ -7,12 +8,12 @@ let g:coc_global_extensions = [
             \ 'coc-java-lombok',
             \ 'coc-json',
             \ 'coc-pairs',
-            \ 'coc-python',
+            \ 'coc-pyright',
             \ 'coc-restclient',
             \ 'coc-snippets',
             \ 'coc-svelte',
-            \ 'coc-tsserver',
             \ 'coc-tailwindcss',
+            \ 'coc-tsserver',
             \]
 
 " Tab for trigger completion with characters ahead and navigate.

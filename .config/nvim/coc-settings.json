@@ -1,7 +1,7 @@
 {
   "languageserver": {
     "ccls": {
-      "command": "/usr/local/opt/ccls/bin/ccls",
+      "command": "/usr/local/bin/ccls",
       "filetypes": ["c", "cpp", "objc", "objcpp"],
       "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
       "initializationOptions": {
@@ -27,13 +27,9 @@
   ],
   "java.errors.incompleteClasspath.severity": "ignore",
   "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"${HOME}/.config/coc/extensions/node_modules/coc-java-lombok/jar/lombok.jar\"",
-  "python.jediPath": "/usr/local/lib/python3.9/site-packages",
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.headwind.runOnSave": false,
-  "tsserver.npm": "${HOME}/.nvm/versions/node/v14.15.2/bin/npm",
-  "tsserver.tsdk": "${HOME}/.nvm/versions/node/v14.15.2/lib/node_modules/typescript/lib",
-  "python.autoComplete.extraPaths": [
-    "${env:SPARK_HOME}/python",
-    "${env:SPARK_HOME}/python/pyspark"
-  ]
+  "tsserver.npm": "/Users/bryan/.nvm/versions/node/v15.11.0/bin/npm",
+  "tsserver.tsdk": "/Users/bryan/.nvm/versions/node/v15.11.0/lib/node_modules/typescript/lib",
+  "clangd.path": "/Users/bryan/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd"
 }

@@ -17,7 +17,7 @@ Clone this repository into a bare repo at `~/.dotfiles/`.
 Make sure to set up the SSH keys prior to using SSH, or use HTTPS otherwise.
 
 ```bash
-git clone --bare https://github.com/bryanmylee/dotfiles.git $HOME/.dotfiles
+git clone --bare git@github.com:bryanmylee/dotfiles.git $HOME/.dotfiles
 ```
 
 Finally, checkout the dotfiles.

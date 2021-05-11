@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.zsh"
 
+# nnn
+export EDITOR="/bin/nvim"
+
 host=`hostname`
 if [[ $host == "bryan-server" ]]; then
   ZSH_THEME="gallois-server"
@@ -22,8 +25,7 @@ plugins=(
 )
 
 source "$ZSH/oh-my-zsh.sh"
-source "$HOME/.scripts/sh/ranger-cd.sh"
-source "$HOME/.scripts/sh/auto-remote-sync.sh"
+source "$HOME/.scripts/sh/quitcd.sh"
 
 
 

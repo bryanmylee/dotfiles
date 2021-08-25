@@ -97,6 +97,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd --type f'
+alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
 # Aliases
 # =======

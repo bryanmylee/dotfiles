@@ -51,7 +51,7 @@ set smartcase
 set foldmethod=syntax
 set nofoldenable
 " conceal config
-set conceallevel=2
+set conceallevel=0
 set concealcursor="nc"
 " strip trailing whitespaces
 autocmd BufWritePre * %s/\v\s+$//e

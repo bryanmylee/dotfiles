@@ -1,18 +1,14 @@
 " toggles are prefixed with <Bslash>
-source ~/.config/nvim/rc/mappings-toggle.vim
+source ~/.config/nvim/runtime/keymap/toggle.vim
 
 " actions are prefixed with <Leader>
-source ~/.config/nvim/rc/mappings-actions.vim
+source ~/.config/nvim/runtime/keymap/actions.vim
 
 " plugin text editing functions are prefixed with g
-source ~/.config/nvim/rc/mappings-editing.vim
+source ~/.config/nvim/runtime/keymap/editing.vim
 
 " the built-in terminal requires some special mappings
-source ~/.config/nvim/rc/mappings-terminal.vim
-
-" coc navigation mappings are defined in configure-coc
-" coc extension actions are prefixed with <Leader>c
-source ~/.config/nvim/rc/mappings-coc-actions.vim
+source ~/.config/nvim/runtime/keymap/terminal.vim
 
 " move to the next displayed line with j and k
 nnoremap j gj

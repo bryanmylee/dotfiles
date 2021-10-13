@@ -1,3 +1,7 @@
+" coc navigation mappings are defined in configure-coc
+" coc extension actions are prefixed with <Leader>c
+source ~/.config/nvim/runtime/keymap/coc-actions.vim
+
 let g:coc_global_extensions = [
             \ 'coc-clangd',
             \ 'coc-css',

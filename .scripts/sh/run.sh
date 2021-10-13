@@ -1,21 +1,23 @@
 #!/bin/bash
 
 # My own script for emulating code runner!
-filename="$1"
-ext="${filename##*.}"
-name="${filename%.*}"
+FILENAME="$1"
+EXT="${FILENAME##*.}"
+NAME="${FILENAME%.*}"
 
-if [[ $ext = "c" ]]; then
-  gcc "$filename" -g -O1 -fsanitize=address -o "$name";
-  ./"$name";
-  rm "$name";
-  rm -r "${name}.dSYM"
-elif [[ $ext = "py" ]]; then
-  python3 "$filename"
-elif [[ $ext = "applescript" ]] || [[ $ext = "scpt" ]]; then
-  osascript "$filename"
-elif [[ $ext = "js" ]]; then
-  node "$filename"
-elif [[ $ext = "java" ]]; then
-  javac -d temp "$filename" && java -cp .:temp "$name" && rm -rf temp;
+if [[ $EXT = "c" ]]; then
+  gcc "$FILENAME" -g -O1 -fsanitize=address -o "$NAME";
+  ./"$NAME";
+  rm "$NAME";
+  rm -r "${NAME}.dSYM";
+elif [[ $EXT = "py" ]]; then
+  python3 "$FILENAME";
+elif [[ $EXT = "applescript" ]] || [[ $EXT = "scpt" ]]; then
+  osascript "$FILENAME";
+elif [[ $EXT = "js" ]]; then
+  node "$FILENAME";
+elif [[ $EXT = "java" ]]; then
+  javac -d temp "$FILENAME" && java -cp .:temp "$NAME" && rm -rf temp;
+elif [[ $EXT = "swift" ]]; then
+  swift "$FILENAME";
 fi

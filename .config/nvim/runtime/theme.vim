@@ -1,5 +1,5 @@
 let g:dark_theme = "horizon"
-let g:light_theme = "xcodelight"
+let g:light_theme = "solarized"
 
 if (has("nvim"))
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -20,7 +20,11 @@ function! ToggleDarkMode()
     set background=dark
     execute 'colorscheme ' . g:dark_theme
   endif
+  hi Normal guibg=NONE ctermbg=NONE
+  hi EndOfBuffer guibg=NONE ctermbg=NONE
 endfunction
 
+hi Normal guibg=NONE ctermbg=NONE
+hi EndOfBuffer guibg=NONE ctermbg=NONE
 nmap <silent> <Bslash>c :call ToggleDarkMode()<CR>
 

@@ -80,3 +80,5 @@ let g:table_mode_corner='|'
 " vim-svelte
 let g:svelte_preprocessors = ['typescript']
 
+" indentLine
+let g:indentLine_char = '│'

@@ -40,6 +40,10 @@ git config --global core.excludesfile ~/.gitignore
 
 [zsh](http://zsh.sourceforge.net) is used for this configuration.
 
+### zplug
+
+[zplug](https://github.com/zplug/zplug) is used to install zsh plugins.
+
 ### tmux
 
 [tmux](https://github.com/tmux/tmux/wiki) is used for session persistance and window management.

@@ -176,4 +176,3 @@ if [[ -f "$LOCAL_SCRIPT" ]]; then
     source "$LOCAL_SCRIPT"
 fi
 
-module_init

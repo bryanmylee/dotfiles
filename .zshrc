@@ -159,8 +159,8 @@ eval "$(direnv hook zsh)"
 
 # jenv
 # ====
-# export PATH="$HOME/.jenv/bin:$PATH"
-# eval "$(jenv init -)"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 # _evalcache jenv init -
 
 # rvm
@@ -176,3 +176,4 @@ if [[ -f "$LOCAL_SCRIPT" ]]; then
     source "$LOCAL_SCRIPT"
 fi
 
+export GPG_TTY=$(tty)

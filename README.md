@@ -73,6 +73,12 @@ In addition, Neovim will require an installation of Python and the [neovim](http
 
 [fzf](https://github.com/junegunn/fzf) is used system-wide and within Neovim to provide fuzzy file-finding.
 
+Install fzf key bindings and fuzzy completion with:
+
+```sh
+$(brew --prefix)/opt/fzf/install
+```
+
 ### nnn
 
 [nnn](https://github.com/jarun/nnn) for navigation commmands.

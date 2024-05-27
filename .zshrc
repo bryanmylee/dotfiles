@@ -132,6 +132,8 @@ alias run="~/.scripts/sh/run.sh"
 # git
 alias ga="git add"
 alias gb="git branch"
+alias gbdcheck="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d"
+alias gbd="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
 alias gc="git commit"
 alias gcnv="git commit --no-verify"
 alias gco="git checkout"

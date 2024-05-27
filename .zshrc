@@ -3,11 +3,7 @@ zmodload zsh/zprof
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.zsh"
 host=`hostname`
-if [[ $host == "bryan-server" ]]; then
-    ZSH_THEME="gallois-server"
-else
-    ZSH_THEME="gallois-home"
-fi
+ZSH_THEME=robbyrussell
 
 # nvm
 # ===

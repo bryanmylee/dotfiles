@@ -26,6 +26,9 @@ xnoremap <C-c> "+y
 xnoremap <C-x> "+x
 map <C-v> "+gP
 
+" Enter to autocomplete instead of <C-y>
+inoremap <expr> <Enter> coc#pum#visible() ? coc#_select_confirm() : "\<Enter>"
+
 " vim-tmux-navigator
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <M-h> :TmuxNavigateLeft<CR>

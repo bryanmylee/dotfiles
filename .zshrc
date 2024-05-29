@@ -170,8 +170,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Local private config
 # ====================
 LOCAL_SCRIPT="$HOME/.config/local-config.sh"
-if [[ -f "$LOCAL_SCRIPT" ]]; then
-    source "$LOCAL_SCRIPT"
-fi
+[ -f "$LOCAL_SCRIPT" ] && source "$LOCAL_SCRIPT"
 
 export GPG_TTY=$(tty)

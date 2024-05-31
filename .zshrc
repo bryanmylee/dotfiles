@@ -132,8 +132,8 @@ alias run="~/.scripts/sh/run.sh"
 # git
 alias ga="git add"
 alias gb="git branch"
-alias gbdcheck="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d"
-alias gbd="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
+alias gbdcheck="git fetch -p && git branch -vv | awk '/: gone]/{print $1}'"
+alias gbd="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs -0 git branch -D"
 alias gc="git commit"
 alias gcnv="git commit --no-verify"
 alias gco="git checkout"
@@ -144,6 +144,7 @@ alias glo="git log --graph --oneline --decorate"
 alias glpf="git log -p --follow"
 alias gmv="git mv"
 alias gph="git push"
+alias gphpub='eval "git push -u origin `git rev-parse --abbrev-ref HEAD`"'
 alias gpl="git pull"
 alias gri="git rebase -i"
 alias gs="git status"
@@ -157,8 +158,8 @@ eval "$(direnv hook zsh)"
 
 # jenv
 # ====
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
 # _evalcache jenv init -
 
 # rvm
@@ -172,4 +173,22 @@ export PATH="$PATH:$HOME/.rvm/bin"
 LOCAL_SCRIPT="$HOME/.config/local-config.sh"
 [ -f "$LOCAL_SCRIPT" ] && source "$LOCAL_SCRIPT"
 
+# Remote / SSH configuration
+# ==========================
 export GPG_TTY=$(tty)
+# For local machines only
+export DISPLAY=:0
+# For remote Linux machines only
+# alias pbcopy="xclip -in -selection clipboard"
+
+# Utilities
+# =========
+function trash() { mv "$@" ~/.Trash; }
+
+# Logging utilities
+# =================
+logprint() { tee >(sed -r 's/\x1b\[[0-9;]*m//g' > "$1") }
+alias now='echo $(date -u +"%Y-%m-%dT%H:%M:%SZ")'
+# This allows us to do something like:
+# ./runProcess | logprint ./logs/`now`.log
+

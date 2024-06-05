@@ -1,0 +1,935 @@
+{
+  "title": "Mouse Keys Mode v5",
+  "rules": [
+    {
+      "available_since": "13.6.0",
+      "description": "Mouse Keys Mode v5",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            },
+            {
+              "name": "mouse_keys_mode_v5_scroll",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "vertical_wheel": 32
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "y": 1536
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "modifiers": {
+              "optional": ["any"]
+            },
+            "simultaneous": [
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "s"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5",
+                    "value": 0
+                  }
+                },
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5_scroll",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5",
+                "value": 1
+              }
+            },
+            {
+              "mouse_key": {
+                "y": 1536
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            },
+            {
+              "name": "mouse_keys_mode_v5_scroll",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "vertical_wheel": -32
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "y": -1536
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "modifiers": {
+              "optional": ["any"]
+            },
+            "simultaneous": [
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "w"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5",
+                    "value": 0
+                  }
+                },
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5_scroll",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5",
+                "value": 1
+              }
+            },
+            {
+              "mouse_key": {
+                "y": -1536
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            },
+            {
+              "name": "mouse_keys_mode_v5_scroll",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "horizontal_wheel": 32
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": -1536
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "modifiers": {
+              "optional": ["any"]
+            },
+            "simultaneous": [
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "a"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5",
+                    "value": 0
+                  }
+                },
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5_scroll",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5",
+                "value": 1
+              }
+            },
+            {
+              "mouse_key": {
+                "x": -1536
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            },
+            {
+              "name": "mouse_keys_mode_v5_scroll",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "horizontal_wheel": -32
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": 1536
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "modifiers": {
+              "optional": ["any"]
+            },
+            "simultaneous": [
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "d"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5",
+                    "value": 0
+                  }
+                },
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5_scroll",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5",
+                "value": 1
+              }
+            },
+            {
+              "mouse_key": {
+                "x": 1536
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "modifiers": {
+              "optional": ["any"]
+            },
+            "simultaneous": [
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "j"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5",
+                    "value": 0
+                  }
+                },
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5_scroll",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5",
+                "value": 1
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button3"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "modifiers": {
+              "optional": ["any"]
+            },
+            "simultaneous": [
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "o"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5",
+                    "value": 0
+                  }
+                },
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5_scroll",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5",
+                "value": 1
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button2"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "modifiers": {
+              "optional": ["any"]
+            },
+            "simultaneous": [
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "l"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5",
+                    "value": 0
+                  }
+                },
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5_scroll",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5",
+                "value": 1
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5_scroll",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5_scroll",
+                "value": 0
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "modifiers": {
+              "optional": ["any"]
+            },
+            "simultaneous": [
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "semicolon"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5",
+                    "value": 0
+                  }
+                },
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5_scroll",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5",
+                "value": 1
+              }
+            },
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5_scroll",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5_scroll",
+                "value": 0
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "speed_multiplier": 0.5
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "x",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "speed_multiplier": 2.0
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "speed_multiplier": 5.0
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "q",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "software_function": {
+                "set_mouse_cursor_position": {
+                  "screen": 0,
+                  "x": "50%",
+                  "y": "50%"
+                }
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "modifiers": {
+              "optional": ["any"]
+            },
+            "simultaneous": [
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "q"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5",
+                    "value": 0
+                  }
+                },
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5_scroll",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5",
+                "value": 1
+              }
+            },
+            {
+              "software_function": {
+                "set_mouse_cursor_position": {
+                  "screen": 0,
+                  "x": "50%",
+                  "y": "50%"
+                }
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_keys_mode_v5",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "software_function": {
+                "set_mouse_cursor_position": {
+                  "screen": 1,
+                  "x": "50%",
+                  "y": "50%"
+                }
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "modifiers": {
+              "optional": ["any"]
+            },
+            "simultaneous": [
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "e"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5",
+                    "value": 0
+                  }
+                },
+                {
+                  "set_variable": {
+                    "name": "mouse_keys_mode_v5_scroll",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_keys_mode_v5",
+                "value": 1
+              }
+            },
+            {
+              "software_function": {
+                "set_mouse_cursor_position": {
+                  "screen": 1,
+                  "x": "50%",
+                  "y": "50%"
+                }
+              }
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

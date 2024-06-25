@@ -188,7 +188,7 @@ function trash() { mv "$@" ~/.Trash; }
 # Logging utilities
 # =================
 logprint() { tee >(sed -r 's/\x1b\[[0-9;]*m//g' > "$1") }
-alias now='echo $(date -u +"%Y-%m-%dT%H:%M:%SZ")'
+alias now='echo $(date -u +"%Y-%m-%dT%H%M%SZ")'
 # This allows us to do something like:
 # ./runProcess | logprint ./logs/`now`.log
 

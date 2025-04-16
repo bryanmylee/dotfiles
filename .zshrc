@@ -164,11 +164,6 @@ eval "$(direnv hook zsh)"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # export PATH="$PATH:$HOME/.rvm/bin"
 
-# Local private config
-# ====================
-LOCAL_SCRIPT="$HOME/.config/local-config.sh"
-[ -f "$LOCAL_SCRIPT" ] && source "$LOCAL_SCRIPT"
-
 # Remote / SSH configuration
 # ==========================
 export GPG_TTY=$(tty)

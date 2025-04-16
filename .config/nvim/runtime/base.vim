@@ -37,8 +37,8 @@ set expandtab
 " shift to the next round tab stop
 set shiftround
 " enable relative line numbers
-set number
-set relativenumber
+" set number
+" set relativenumber
 " enable line wrapping
 set wrap linebreak nolist
 " enable highlighted search
@@ -61,4 +61,6 @@ set splitbelow
 set foldmethod=manual
 
 let g:python3_host_prog = "/usr/local/bin/python3"
+
+inoremap <expr> <Tab> coc#pum#visible() ? coc#_select_confirm() : "\<Tab>"
 

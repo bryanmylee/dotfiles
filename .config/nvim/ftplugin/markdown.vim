@@ -3,3 +3,5 @@ let g:vim_markdown_folding_level = 2
 let b:indentLine_enabled = 0
 IndentLinesToggle
 setlocal foldenable
+set conceallevel=0
+

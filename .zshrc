@@ -163,8 +163,8 @@ eval "$(direnv hook zsh)"
 # ====
 # export PATH="$HOME/.jenv/bin:$PATH"
 # eval "$(jenv init -)"
-# export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 # _evalcache jenv init -
+# export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 
 # rvm
 # ===

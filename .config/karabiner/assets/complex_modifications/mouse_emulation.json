@@ -698,7 +698,7 @@
           ],
           "type": "basic"
         },
-        {
+                {
           "conditions": [
             {
               "name": "mouse_keys_mode_v5",
@@ -715,7 +715,7 @@
           "to": [
             {
               "mouse_key": {
-                "speed_multiplier": 0.25
+                "speed_multiplier": 0.1459102934
               }
             }
           ],
@@ -738,7 +738,7 @@
           "to": [
             {
               "mouse_key": {
-                "speed_multiplier": 0.5
+                "speed_multiplier": 0.3819820591
               }
             }
           ],
@@ -761,7 +761,7 @@
           "to": [
             {
               "mouse_key": {
-                "speed_multiplier": 5.0
+                "speed_multiplier": 4.235801032
               }
             }
           ],
@@ -784,7 +784,7 @@
           "to": [
             {
               "mouse_key": {
-                "speed_multiplier": 10.0
+                "speed_multiplier": 17.9420103827
               }
             }
           ],

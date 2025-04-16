@@ -1,5 +1,8 @@
 zmodload zsh/zprof
-source ~/.zplug/init.zsh
+# zplug
+# =====
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.zsh"

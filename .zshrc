@@ -1,8 +1,24 @@
 zmodload zsh/zprof
+
 # zplug
 # =====
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
+
+zplug "lukechilds/zsh-nvm"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "agkozak/zsh-z"
+zplug "plugins/git", from:oh-my-zsh
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+zplug load
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.zsh"
@@ -15,14 +31,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Must be exported before plugins are loaded.
 export NVM_LAZY_LOAD=true
-
-zplug "lukechilds/zsh-nvm"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "agkozak/zsh-z"
-
-zplug load
-
-plugins=( git )
 
 source "$ZSH/oh-my-zsh.sh"
 

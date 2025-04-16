@@ -44,6 +44,10 @@ git config --global core.excludesfile ~/.gitignore
 
 [zplug](https://github.com/zplug/zplug) is used to install zsh plugins.
 
+```sh
+brew install zplug
+```
+
 ### tmux
 
 [tmux](https://github.com/tmux/tmux/wiki) is used for session persistance and window management.
@@ -54,7 +58,7 @@ git config --global core.excludesfile ~/.gitignore
 
 To install all plugins, install [vim-plug](https://github.com/junegunn/vim-plug).
 
-```bash
+```sh
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```

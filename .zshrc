@@ -1,4 +1,5 @@
 zmodload zsh/zprof
+source ~/.zplug/init.zsh
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.zsh"
@@ -8,19 +9,17 @@ ZSH_THEME=robbyrussell
 # nvm
 # ===
 export NVM_DIR="$HOME/.nvm"
-# Disabled in favour of zsh-nvm
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Must be exported before plugins are loaded.
 export NVM_LAZY_LOAD=true
 
-plugins=(
-    git
-    z
-    zsh-syntax-highlighting
-    zsh-nvm
-    # evalcache
-)
+zplug "lukechilds/zsh-nvm"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "agkozak/zsh-z"
+
+zplug load
+
+plugins=( git )
 
 source "$ZSH/oh-my-zsh.sh"
 
@@ -108,11 +107,6 @@ export BAT_THEME="OneHalfDark"
 # =====
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# fzf
-# ===
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='fd --type f'
-alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
 # Aliases
 # =======
@@ -127,8 +121,6 @@ alias v='vim'
 # Shortcut for vim fzf
 alias vimf='nvim "`fzf`"'
 alias vf='vimf'
-# Code-Runner imitation
-alias run="~/.scripts/sh/run.sh"
 # git
 alias ga="git add"
 alias gb="git branch"
@@ -160,13 +152,14 @@ eval "$(direnv hook zsh)"
 # ====
 # export PATH="$HOME/.jenv/bin:$PATH"
 # eval "$(jenv init -)"
+# export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 # _evalcache jenv init -
 
 # rvm
 # ===
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# export PATH="$PATH:$HOME/.rvm/bin"
 
 # Local private config
 # ====================

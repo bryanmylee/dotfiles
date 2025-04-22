@@ -1,5 +1,5 @@
 let g:dark_theme = "horizon"
-let g:light_theme = "solarized"
+let g:light_theme = "xcodelight"
 
 if (has("nvim"))
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -8,9 +8,12 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+let g:airline_theme='atomic'
+
 set background=dark
 execute 'colorscheme ' . g:dark_theme
-let g:airline_theme='atomic'
+hi Normal guibg=NONE ctermbg=NONE
+hi EndOfBuffer guibg=NONE ctermbg=NONE
 
 function! ToggleDarkMode()
   if &background == 'dark'
@@ -20,11 +23,9 @@ function! ToggleDarkMode()
     set background=dark
     execute 'colorscheme ' . g:dark_theme
   endif
-  hi Normal guibg=NONE ctermbg=NONE
-  hi EndOfBuffer guibg=NONE ctermbg=NONE
+  " hi Normal guibg=NONE ctermbg=NONE
+  " hi EndOfBuffer guibg=NONE ctermbg=NONE
 endfunction
 
-hi Normal guibg=NONE ctermbg=NONE
-hi EndOfBuffer guibg=NONE ctermbg=NONE
 nmap <silent> <Bslash>c :call ToggleDarkMode()<CR>
 

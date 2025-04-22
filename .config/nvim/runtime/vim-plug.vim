@@ -60,10 +60,7 @@ if !exists('g:vscode')
     " | Colors |
     " +--------+
     Plug 'arzg/vim-colors-xcode'
-    Plug 'joshdick/onedark.vim'
-    Plug 'haishanh/night-owl.vim'
     Plug 'ntk148v/vim-horizon'
-    Plug 'ericbn/vim-solarized'
     " +-----+
     " | git |
     " +-----+

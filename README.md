@@ -87,12 +87,12 @@ $(brew --prefix)/opt/fzf/install
 brew install fd
 ```
 
-### nnn
+### lf
 
-[nnn](https://github.com/jarun/nnn) for interactive directory navigation.
+[lf](https://github.com/gokcehan/lf) for interactive directory navigation.
 
 ```sh
-brew install nnn
+brew install lf
 ```
 
 ### lsd

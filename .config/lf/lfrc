@@ -1,0 +1,17 @@
+set shell zsh
+
+set previewer ~/.config/lf/preview.sh
+
+cmd move-parent &{{
+    dironly="setlocal \"$(dirname -- "$PWD" | sed 's/\\/\\\\/g;s/"/\\"/g')\" dironly"
+    lf -remote "send $id :updir; $dironly true; $1; $dironly false; open"
+}}
+
+map J move-parent down
+map K move-parent up
+map Q quit
+
+# Quit without changing directories
+map <c-c> %lf -remote "send $id :cd \"$lf_user_OLDPWD\"; quit"
+&sleep 0.1 && lf -remote "send $id set user_OLDPWD \"$PWD\""
+

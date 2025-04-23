@@ -24,15 +24,15 @@ let g:coc_global_extensions = [
 inoremap <silent><expr> <Tab>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump', ''])\<CR>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
+      \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 
-inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
+function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 let g:coc_snippet_next = '<Tab>'
 let g:coc_snippet_prev = '<S-Tab>'

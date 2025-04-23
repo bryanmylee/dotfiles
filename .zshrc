@@ -5,7 +5,6 @@ zmodload zsh/zprof
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "lukechilds/zsh-nvm"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "agkozak/zsh-z"
 zplug "plugins/git", from:oh-my-zsh
@@ -24,13 +23,6 @@ zplug load
 export ZSH="$HOME/.zsh"
 host=`hostname`
 ZSH_THEME=robbyrussell
-
-# nvm
-# ===
-export NVM_DIR="$HOME/.nvm"
-
-# Must be exported before plugins are loaded.
-export NVM_LAZY_LOAD=true
 
 source "$ZSH/oh-my-zsh.sh"
 
@@ -51,19 +43,21 @@ timezsh() {
 # ==================
 export TERM=xterm-256color
 export VISUAL='nvim'
-
-# nnn
-# ===
 export EDITOR="/bin/nvim"
-source "$HOME/.scripts/sh/quitcd.sh"
 
 # dotfiles
 # ========
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfiles config --local status.showUntrackedFiles no
 
-# vi
-# ==
+# direnv
+# ======
+if command -v direnv >/dev/null 2>&1; then
+    eval "$(direnv hook zsh)"
+fi
+
+# vi mode
+# =======
 bindkey -v
 export KEYTIMEOUT=1
 
@@ -110,35 +104,75 @@ bindkey "^[OB" down-line-or-beginning-search
 bindkey -M vicmd "k" up-line-or-beginning-search
 bindkey -M vicmd "j" down-line-or-beginning-search
 
+# nnn
+# ===
+n () {
+    # Block nesting of nnn in subshells
+    if [ -n $NNNLVL ] && [ "${NNNLVL:-0}" -ge 1 ]; then
+        echo "nnn is already running"
+        return
+    fi
+
+    # The default behaviour is to cd on quit (nnn checks if NNN_TMPFILE is set)
+    # To cd on quit only on ^G, remove the "export" as in:
+    #     NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+    # NOTE: NNN_TMPFILE is fixed, should not be modified
+    NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+
+    # Unmask ^Q (, ^V etc.) (if required, see `stty -a`) to Quit nnn
+    # stty start undef
+    # stty stop undef
+    # stty lwrap undef
+    # stty lnext undef
+
+    nnn "$@"
+
+    if [ -f "$NNN_TMPFILE" ]; then
+            . "$NNN_TMPFILE"
+            rm -f "$NNN_TMPFILE" > /dev/null
+    fi
+}
+
 # bat
 # ===
-export BAT_THEME="OneHalfDark"
+if command -v bat >/dev/null 2>&1; then
+    export BAT_THEME="TwoDark"
+fi
 
 # fzf
 # ===
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='fd --type f'
-alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+if command -v fzf >/dev/null 2>&1; then
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+    export FZF_DEFAULT_COMMAND='fd --type f'
+    alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+fi
 
-# iTerm
-# =====
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# lsd
+# ===
+if command -v lsd >/dev/null 2>&1; then
+    alias ols='command ls'
+    alias ls='lsd'
+fi
 
+# neovim
+# ======
+if command -v nvim >/dev/null 2>&1; then
+    # Route vim to nvim
+    alias vim='nvim'
+    alias vi='vim'
+    alias v='vim'
+    # Shortcut for vim fzf
+    alias vimf='nvim "`fzf`"'
+    alias vf='vimf'
+fi
 
-# Aliases
-# =======
 # Fix for sudo
 alias sudo='sudo '
 # Repeat last command with sudo
 alias please='eval "sudo $( fc -ln -1 )"'
-# Route vim to nvim
-alias vim='nvim'
-alias vi='vim'
-alias v='vim'
-# Shortcut for vim fzf
-alias vimf='nvim "`fzf`"'
-alias vf='vimf'
+
 # git
+# ===
 alias ga="git add"
 alias gb="git branch"
 alias gbdcheck="git fetch -p && git branch -vv | awk '/: gone]/{print $1}'"
@@ -160,24 +194,6 @@ alias gs="git status"
 alias gsh="git stash"
 alias gsp="git stash pop"
 
-# direnv
-# ======
-eval "$(direnv hook zsh)"
-# _evalcache direnv hook zsh
-
-# jenv
-# ====
-# export PATH="$HOME/.jenv/bin:$PATH"
-# eval "$(jenv init -)"
-# _evalcache jenv init -
-# export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
-
-# rvm
-# ===
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-# export PATH="$PATH:$HOME/.rvm/bin"
-
 # Remote / SSH configuration
 # ==========================
 export GPG_TTY=$(tty)
@@ -196,4 +212,8 @@ logprint() { tee >(sed -r 's/\x1b\[[0-9;]*m//g' > "$1") }
 alias now='echo $(date -u +"%Y-%m-%dT%H%M%SZ")'
 # This allows us to do something like:
 # ./runProcess | logprint ./logs/`now`.log
+
+# iTerm
+# =====
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

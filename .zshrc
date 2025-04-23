@@ -22,7 +22,7 @@ zplug load
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.zsh"
 host=`hostname`
-ZSH_THEME=robbyrussell
+ZSH_THEME=af-magic
 
 source "$ZSH/oh-my-zsh.sh"
 

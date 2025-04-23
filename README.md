@@ -60,6 +60,14 @@ brew install zplug
 brew install tmux
 ```
 
+### bat
+
+[bat](https://github.com/sharkdp/bat) for `cat` with syntax highlighting.
+
+```sh
+brew install bat
+```
+
 ### fzf
 
 [fzf](https://github.com/junegunn/fzf) is used system-wide and within Neovim to provide interactive fuzzy file-finding.
@@ -94,6 +102,10 @@ brew install nnn
 ```sh
 brew install lsd
 ```
+
+### direnv
+
+[direnv](https://direnv.net/) to manage project environments.
 
 ## Editor
 

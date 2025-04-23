@@ -13,15 +13,15 @@ Plug 'wellle/targets.vim'              " A whole bunch of text objects
 Plug 'dhruvasagar/vim-table-mode'      " <Leader>tm
 Plug 'vim-scripts/DoxygenToolkit.vim'  " Generate doxygen comments for C and other languages
 " vim-easymotion for VSCode
-Plug 'asvetliakov/vim-easymotion'       " <Leader><Leader>f, F, t, T
-if !exists('g:vscode')
-    Plug 'tpope/vim-commentary'            " gc<motion>
-else
+Plug 'asvetliakov/vim-easymotion'      " <Leader><Leader>f, F, t, T
+if exists('g:vscode')
     " Use default VSCode comment functionality.
     xmap gc  <Plug>VSCodeCommentary
     nmap gc  <Plug>VSCodeCommentary
     omap gc  <Plug>VSCodeCommentary
     nmap gcc <Plug>VSCodeCommentaryLine
+else
+    Plug 'tpope/vim-commentary'        " gc<motion>
 endif
 
 if !exists('g:vscode')
@@ -42,8 +42,10 @@ if !exists('g:vscode')
     " +-----+
     Plug 'psliwka/vim-smoothie'
     Plug 'christoomey/vim-tmux-navigator'
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-    Plug 'junegunn/fzf.vim'
+    if has('nvim-0.5')
+        Plug 'nvim-lua/plenary.nvim'
+        Plug 'nvim-telescope/telescope.nvim'
+    endif
     " +------------------+
     " | Language Support |
     " +------------------+

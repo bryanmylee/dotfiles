@@ -1,3 +1,5 @@
+inoremap <expr> <Tab> coc#pum#visible() ? coc#_select_confirm() : "\<Tab>"
+
 " coc extension commands are prefixed with <Leader>c
 " =================================================
 " Use rest client

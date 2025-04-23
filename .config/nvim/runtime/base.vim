@@ -60,7 +60,5 @@ set splitbelow
 " manual motion-based folding
 set foldmethod=manual
 
-let g:python3_host_prog = "/usr/local/bin/python3"
-
-inoremap <expr> <Tab> coc#pum#visible() ? coc#_select_confirm() : "\<Tab>"
+let g:python3_host_prog = "/usr/bin/python3"
 

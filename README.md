@@ -112,7 +112,7 @@ brew install lsd
 [Neovim](https://neovim.io) is the editor of choice.
 
 ```sh
-brew install neoviim
+brew install neovim
 ```
 
 To install all plugins, install [vim-plug](https://github.com/junegunn/vim-plug).
@@ -134,6 +134,19 @@ Then, open a Neovim buffer, and run `:PlugInstall`. This will install all Neovim
 
 [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com) is required by coc.nvim, the Intellisense engine used for Neovim.
 
+```sh
+asdf plugin add nodejs
+asdf install nodejs latest
+asdf set nodejs latest
+```
+
 ### Python
 
 In addition, Neovim will require an installation of Python and the [neovim](https://pypi.org/project/neovim/) package.
+
+Avoid using an externally managed Python installation for neovim. Instead, use the system installed version.
+
+```sh
+/usr/bin/pip3 install neovim
+```
+

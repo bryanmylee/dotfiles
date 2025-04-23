@@ -26,7 +26,7 @@ Finally, checkout the dotfiles.
 dotfiles checkout
 ```
 
-### Global gitignore
+## Global gitignore
 
 To set up environment-specific files to ignore system-wide, configure the global excludes file.
 
@@ -34,7 +34,9 @@ To set up environment-specific files to ignore system-wide, configure the global
 git config --global core.excludesfile ~/.gitignore
 ```
 
-## Dependencies
+# Dependencies
+
+## Terminal environment
 
 ### zsh
 
@@ -48,13 +50,58 @@ git config --global core.excludesfile ~/.gitignore
 brew install zplug
 ```
 
+## Utilities
+
 ### tmux
 
 [tmux](https://github.com/tmux/tmux/wiki) is used for session persistance and window management.
 
-### Neovim
+```sh
+brew install tmux
+```
+
+### fzf
+
+[fzf](https://github.com/junegunn/fzf) is used system-wide and within Neovim to provide interactive fuzzy file-finding.
+
+Install fzf key bindings and fuzzy completion with:
+
+```sh
+brew install fzf
+$(brew --prefix)/opt/fzf/install
+```
+
+### fd
+
+[fd](https://github.com/sharkdp/fd) for file finding. This is paired with fzf.
+
+```sh
+brew install fd
+```
+
+### nnn
+
+[nnn](https://github.com/jarun/nnn) for interactive directory navigation.
+
+```sh
+brew install nnn
+```
+
+### lsd
+
+[lsd](https://github.com/lsd-rs/lsd) for better directory listing.
+
+```sh
+brew install lsd
+```
+
+## Editor
 
 [Neovim](https://neovim.io) is the editor of choice.
+
+```sh
+brew install neoviim
+```
 
 To install all plugins, install [vim-plug](https://github.com/junegunn/vim-plug).
 
@@ -65,6 +112,12 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 Then, open a Neovim buffer, and run `:PlugInstall`. This will install all Neovim plugins, as well as all [coc.nvim](https://github.com/neoclide/coc.nvim) extensions.
 
+## Language runtimes
+
+### asdf
+
+[asdf](https://asdf-vm.com/) to manage language runtimes.
+
 ### Node.js and npm
 
 [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com) is required by coc.nvim, the Intellisense engine used for Neovim.
@@ -72,18 +125,3 @@ Then, open a Neovim buffer, and run `:PlugInstall`. This will install all Neovim
 ### Python
 
 In addition, Neovim will require an installation of Python and the [neovim](https://pypi.org/project/neovim/) package.
-
-### fzf
-
-[fzf](https://github.com/junegunn/fzf) is used system-wide and within Neovim to provide fuzzy file-finding.
-
-Install fzf key bindings and fuzzy completion with:
-
-```sh
-$(brew --prefix)/opt/fzf/install
-```
-
-### nnn
-
-[nnn](https://github.com/jarun/nnn) for navigation commmands.
-

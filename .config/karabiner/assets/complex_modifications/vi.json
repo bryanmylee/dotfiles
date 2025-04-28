@@ -513,7 +513,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "comma",
+        "key_code": "comma",
             "modifiers": {
               "mandatory": [
                 "right_option",
@@ -571,11 +571,8 @@
               "optional": ["any"]
             }
           },
-          "to": [
-            {
-              "key_code": "right_control"
-            }
-          ]
+          "to": [{ "key_code": "right_control" }],
+          "to_if_alone": [{ "key_code": "fn" }]
         }
       ]
     },
@@ -595,11 +592,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "open_bracket"
-            }
-          ]
+          "to": [{ "key_code": "open_bracket" }]
         },
         {
           "type": "basic",
@@ -614,11 +607,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "close_bracket"
-            }
-          ]
+          "to": [{ "key_code": "close_bracket" }]
         },
         {
           "type": "basic",
@@ -633,11 +622,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "backslash"
-            }
-          ]
+          "to": [{ "key_code": "backslash" }]
         },
         {
           "type": "basic",
@@ -717,11 +702,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "delete_forward"
-            }
-          ]
+          "to": [{ "key_code": "delete_forward" }]
         }
       ]
     },
@@ -742,11 +723,7 @@
               "optional": ["any"]
             }
           },
-          "to": [
-            {
-              "key_code": "page_up"
-            }
-          ]
+          "to": [{ "key_code": "page_up" }]
         },
         {
           "type": "basic",
@@ -762,11 +739,7 @@
               "optional": ["any"]
             }
           },
-          "to": [
-            {
-              "key_code": "page_down"
-            }
-          ]
+          "to": [{ "key_code": "page_down" }]
         }
       ]
     },
@@ -787,11 +760,7 @@
               "optional": ["any"]
             }
           },
-          "to": [
-            {
-              "key_code": "left_arrow"
-            }
-          ]
+          "to": [{ "key_code": "left_arrow" }]
         },
         {
           "type": "basic",
@@ -807,11 +776,7 @@
               "optional": ["any"]
             }
           },
-          "to": [
-            {
-              "key_code": "down_arrow"
-            }
-          ]
+          "to": [{ "key_code": "down_arrow" }]
         },
         {
           "type": "basic",
@@ -827,11 +792,7 @@
               "optional": ["any"]
             }
           },
-          "to": [
-            {
-              "key_code": "up_arrow"
-            }
-          ]
+          "to": [{ "key_code": "up_arrow" }]
         },
         {
           "type": "basic",
@@ -847,11 +808,7 @@
               "optional": ["any"]
             }
           },
-          "to": [
-            {
-              "key_code": "right_arrow"
-            }
-          ]
+          "to": [{ "key_code": "right_arrow" }]
         }
       ]
     },
@@ -960,11 +917,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "1"
-            }
-          ]
+          "to": [{ "key_code": "1" }]
         },
         {
           "type": "basic",
@@ -979,11 +932,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "2"
-            }
-          ]
+          "to": [{ "key_code": "2" }]
         },
         {
           "type": "basic",
@@ -998,11 +947,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "3"
-            }
-          ]
+          "to": [{ "key_code": "3" }]
         },
         {
           "type": "basic",
@@ -1017,11 +962,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "4"
-            }
-          ]
+          "to": [{ "key_code": "4" }]
         },
         {
           "type": "basic",
@@ -1036,11 +977,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "5"
-            }
-          ]
+          "to": [{ "key_code": "5" }]
         },
         {
           "type": "basic",
@@ -1055,11 +992,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "6"
-            }
-          ]
+          "to": [{ "key_code": "6" }]
         },
         {
           "type": "basic",
@@ -1074,11 +1007,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "7"
-            }
-          ]
+          "to": [{ "key_code": "7" }]
         },
         {
           "type": "basic",
@@ -1093,11 +1022,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "8"
-            }
-          ]
+          "to": [{ "key_code": "8" }]
         },
         {
           "type": "basic",
@@ -1112,11 +1037,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "9"
-            }
-          ]
+          "to": [{ "key_code": "9" }]
         },
         {
           "type": "basic",
@@ -1131,11 +1052,7 @@
               ]
             }
           },
-          "to": [
-            {
-              "key_code": "0"
-            }
-          ]
+          "to": [{ "key_code": "0" }]
         }
       ]
     }

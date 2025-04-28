@@ -6,6 +6,8 @@ nmap <Leader>gD :Gvdiff --staged<CR>
 nmap <Leader>gl :G log --graph --oneline --decorate<CR>
 nmap <Leader>gs :G status<CR>
 nmap <Leader>gb :G blame<CR>
+" open blame with commit details
+nmap <Leader>gB :0,3G blame<CR>
 
 " goto next hunk
 nmap <silent> ]h :GitGutterNextHunk<CR>:GitGutterPreviewHunk<CR>

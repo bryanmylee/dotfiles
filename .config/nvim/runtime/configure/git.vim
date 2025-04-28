@@ -1,16 +1,11 @@
 " <Leader>g git stuff
-nmap <Leader>g<Space> :Git \
-nmap <Leader>ga :Git add %<CR>
-nmap <Leader>gc :Gcommit %<CR>
+nmap <Leader>ga :G add %<CR>
+nmap <Leader>gc :G commit %<CR>
 nmap <Leader>gd :Gvdiff<CR>
-nmap <Leader>gD :Gvdiff!<CR>
-nmap <Leader>gl :Git log --graph --oneline --decorate<CR>
-nmap <Leader>gmm :Grename \
-nmap <Leader>gmv :Gmove \
-nmap <Leader>gph :Gpush
-nmap <Leader>gpl :Gpull
-nmap <Leader>gs :Gstatus<CR>
-nmap <Leader>gr :Gread<CR>
+nmap <Leader>gD :Gvdiff --staged<CR>
+nmap <Leader>gl :G log --graph --oneline --decorate<CR>
+nmap <Leader>gs :G status<CR>
+nmap <Leader>gb :G blame<CR>
 
 " goto next hunk
 nmap <silent> ]h :GitGutterNextHunk<CR>:GitGutterPreviewHunk<CR>

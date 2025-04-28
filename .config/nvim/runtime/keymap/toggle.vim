@@ -31,4 +31,6 @@ let g:table_mode_disable_mappings = 1
 let g:table_mode_disable_tableize_mappings = 1
 nmap <silent> <Bslash>t :call tablemode#Toggle()<CR>
 
-
+" vim-smoothie
+" toggle smooth navigation
+nnoremap <silent> <Bslash>s :let g:smoothie_enabled = !g:smoothie_enabled<CR>

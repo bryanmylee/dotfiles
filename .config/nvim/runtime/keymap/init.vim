@@ -16,7 +16,9 @@ nnoremap k gk
 
 " start and end of line with <Space> and <CR>
 nnoremap <silent> <CR> g$
+vnoremap <silent> <CR> g$
 nnoremap <silent> <Space> g^
+vnoremap <silent> <Space> g^
 
 " redo with U instead of <C-r>
 nnoremap U <C-r>
@@ -24,7 +26,7 @@ nnoremap U <C-r>
 " Ctrl-C, X, and V for copy, cut, paste to system
 xnoremap <C-c> "+y
 xnoremap <C-x> "+x
-map <C-v> "+gP
+" map <C-v> "+gP
 
 " Enter to autocomplete instead of <C-y>
 inoremap <expr> <Enter> coc#pum#visible() ? coc#_select_confirm() : "\<Enter>"

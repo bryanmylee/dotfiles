@@ -9,9 +9,12 @@ cmd move-parent &{{
 
 map J move-parent down
 map K move-parent up
-map Q quit
+map ZZ quit
 
-# Quit without changing directories
-map <c-c> %lf -remote "send $id :cd \"$lf_user_OLDPWD\"; quit"
+# set user_OLDPWD for quit without changing directories
 &sleep 0.1 && lf -remote "send $id set user_OLDPWD \"$PWD\""
+# Quit without changing directories
+cmd quit_nocd %lf -remote "send $id :cd \"$lf_user_OLDPWD\"; quit"
+map <c-c> quit_nocd
+map ZQ quit_nocd
 

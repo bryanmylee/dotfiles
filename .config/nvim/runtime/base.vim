@@ -60,5 +60,11 @@ set splitbelow
 " manual motion-based folding
 set foldmethod=manual
 
+" disable neovim 0.10+ LSP bindings
+nunmap gri
+nunmap gra
+nunmap grn
+xunmap gra
+
 let g:python3_host_prog = "/usr/bin/python3"
 

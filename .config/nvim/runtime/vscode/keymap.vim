@@ -1,3 +1,7 @@
+" Restore gq to use vim behavior
+nunmap gq
+nunmap gqq
+
 " [g and ]g to navigate diagnostics
 nnoremap [g <Cmd>lua require('vscode').call('editor.action.marker.prev')<CR>
 nnoremap ]g <Cmd>lua require('vscode').call('editor.action.marker.next')<CR>

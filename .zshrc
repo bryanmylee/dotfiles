@@ -1,5 +1,8 @@
 zmodload zsh/zprof
 
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+
 # zplug
 # =====
 export ZPLUG_HOME=/opt/homebrew/opt/zplug

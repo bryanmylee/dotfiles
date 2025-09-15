@@ -201,3 +201,5 @@ alias now='echo $(date -u +"%Y-%m-%dT%H.%M.%SZ")'
 # =====
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
+. "$HOME/.local/bin/env"
